@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fundo fixo de tela</title>
     <style>
         body {/*essa e uma configuração boa para fazer no site em geral*/
+            
             height: 95vh; 
             background-color: black;
             background-image: url('imagens/wallpaper002.jpg');
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover; /*serve para cobrir a tela inteira com o background*/
+            background-attachment: fixed ; /*por padrao vem scroll que rola a imagem automaticamente porem podemos mudar isso para outro como fixed, que o papel de parede de fundo fica fixo e somente o conteudo vai rolar*/
+
+
+            /*      
+            podemos usar uma shorthand background com a seguinte declaração
+            color > image > position > / > size > repeat > attachment
+            
+            background: black url('imagens/wallpaper002.jpg') center center / cover no-repeat fixed;
+            */
+            
         }
         main {
             background-color: white;
