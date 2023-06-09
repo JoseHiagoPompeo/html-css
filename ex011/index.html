@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em html5</title>
+</head>
+<body>
+    <h1>Imagens dinámicas</h1>
+    <p>Tente abrir esse site em varios dispositivos diferentes</p>
+
+    <picture> <!--ORGANIZAR DA MENOR PARA A MAIOR-->
+        <source media="(max-width: 750px)" srcset="imagens/p.png">
+        <source media="(max-width: 1050px)" srcset="imagens/m.png">
+        <img src="imagens/g.png" alt="foto g">
+    </picture>
+
+    <h1>Reproduzindo audios</h1>
+    <p>Vamos reproduzir audio em html5.</p> <!--podemos usar o mp3 wav e ogg-->
+    <audio src="midia/Jhay Cortez.mp3" controls autoplay>
+        <p>Seu navegador não suporta o elemento audio</a></p>
+    </audio>
+</body>
+</html>
