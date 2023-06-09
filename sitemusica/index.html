@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('imagens/banner.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+
+        }
+
+        p {
+            font-size: 1.2em;
+            padding-top: 25px;
+            padding-bottom: 5px;
+        }
+
+        header{
+            background-color: rgba(0, 0, 0, 0.329);
+            height: 100px;
+            color: white;
+
+        }
+        header > h1 {
+            font-family: 'Permanent Marker', cursive;
+            padding-top: 5px;
+            text-align: center;
+            font-size: 3.5em;
+        }
+
+        .container {
+            width: 300px;
+            text-align: center;
+            display: block;
+            margin: auto;
+            background-color: white;
+            padding: 10px;
+            border-radius: 0px 0px 10px 10px;
+            border: solid black 1px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.329);
+        }
+        .barra {
+            background-color: black;
+            margin-top: 10px;
+            height: 3px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Musica Grátis</h1>
+    </header>
+    <div class="container">
+    <p>Baby Don’t Hurt Me</p> <!--podemos usar o mp3 wav e ogg-->
+    <audio src="musicas/David Guetta.mp3" controls autoplay>
+        <p>Seu navegador não suporta o elemento audio</a></p>
+    </audio>
+    <div class="barra"></div>
+    <p>Baby Don’t Hurt Me</p>
+    <audio src="musicas/JhayCortez.mp3" controls autoplay>
+        <p>Seu navegador não suporta o elemento audio</a></p>
+    </audio>
+</div>
+</body>
+</html>
