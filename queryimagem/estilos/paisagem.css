@@ -1,0 +1,8 @@
+/*PARA APARELHOS DEITADOS ESTILOS PAISAGEM LANDSCAPE*/
+
+
+body{
+    background-image: url('../imagens/cev-landscape.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
