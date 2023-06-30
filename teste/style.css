@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Joti+One&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+}
+
+header#cabeca {
+    display: block;
+    width: 320px;
+    height: 50px;
+    background-color: black;
+    margin: auto;
+}
+
+header h1{
+    font-family: 'Pirata One', cursive;
+    font-size: 36px;
+    color: red;
+    text-align: center;
+}
+
+main#conteudo {
+
+    width: 320px;
+    height: 550px;
+    background-color: #D9D9D9;
+    margin: auto;
+}
+
+p{
+    font-family: 'Joti One', cursive;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+
+}
