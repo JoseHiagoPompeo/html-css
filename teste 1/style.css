@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body, html {
+    background-color: #ffffff;
+
+}
+
+
+header > h1{
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 18pt;
+    margin: 0px;
+    padding: 0px;
+    transform: translate(0px,8px);
+    letter-spacing: 2px;
+    color: #444444;
+
+}
+
+
+header{
+    margin: auto;
+    width: 360px;
+    height: 50px;
+    background-color: #EEEEEE;
+    text-align: center;
+}
+
+div#container {
+    margin: auto;
+    width: 360px;
+    height: 500px;
+    background-color: #F1F1EC;
+
+}
+
+div#container > h1{
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-top: 6px;
+}
+
+div#container > h1#cormudada {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    font-weight: bold;
+    color: #FFB800;
+}
+
+div#imagem > img{
+    width: 170px;
+    height: 170px;
+    padding-left: 10px;
+    padding-top: 6px;
+    float: left;
+}
+
+div#separador {
+    background-color: black;
+    height: 170px;
+    width: 1px;
+    float: right;
+    transform: translate(-165px,6px);
+
+}
+
+div#separador input{
+    margin-left: 20px;
+    width: 105px;
+    height: 20px;
+
+}
+
+div#separador label{
+    margin-left: 20px;
+    width: 105px;
+    height: 20px;
+    color: black;
+
+}
+
+div#quadradoe {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #24313A;
+    color: white;
+    text-align: center;
+    padding-top: 4px;
+    font-size: 14pt;
+    margin-left: 15px;
+
+
+}
+
+
+
+
+
