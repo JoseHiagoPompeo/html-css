@@ -8,6 +8,7 @@
 body{
     font-family: 'Nunito', sans-serif; 
 
+
 }
 
 header{
@@ -26,6 +27,7 @@ header{
 .conteudo-principal{
     margin: auto;
     width: 360px;
+    height: 100vh;
     background-color: #272727;
 }
 
@@ -44,6 +46,7 @@ header{
 .conteudo-calculo{
     display: flex;
     flex-wrap: wrap;
+
 
 }
 
@@ -81,17 +84,57 @@ header{
     background-color: #8E8E8E;
     width: 16px;
     height: 16px;
-    margin: 10px;
-    margin: 8px;
+    margin-right: 10px;
+    margin-top: 8px;
+    margin-bottom: 2px;
     text-align: center;
     font-size: 11px;
     font-weight: bold;
     color: #FFFFFF;
 
+}
 
-
+.inputconfig{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 140px;
+    height: 15px;
+    font-size: 10px;
+    padding: 2px;
+    border: 0px;
 
 }
+
+.botao{
+    width: 65px;
+    height: 16px;
+    margin-left: 10px;
+    margin-top: 11px;
+    margin-bottom: 8px;
+    font-size: 8px;
+    font-weight: bold;
+    background-color: #F6AF43;
+    border: 1px solid rgba(246, 174, 67, 0.01);
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.resultado {
+    width: 65px;
+    height: 16px;
+    background-color: white;
+    margin-right: 10px;
+    margin-top: 11px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    border: 0px;
+    text-align: center;
+    font-size: 8px;
+    font-weight: bold;
+    padding-top: 3px;
+}
+
 
 
 

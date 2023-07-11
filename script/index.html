@@ -12,40 +12,32 @@
     <header>
         <h1 class="titulo-principal">Calculadora</h1>
     </header>
+
     <section class="conteudo-principal">
         <p>Descubra o peso em <span>“gramas”</span> de uma chapa através de suas medias</p>
+
         <div class="conteudo-calculo">
             <div class="imagem">
                 <img src="imagens/imagem.png" alt="Foto-Chapa">
             </div>
+
             <div class="formulario">
-
-             
-                    <label for="icomprimento">Comprimento</label>
-
-            
-                    <div class="c">C</div>
-                    <!--
-                    <input type="number" name="comprimento" id="icomprimento">
-                    
-
-                    <label for="iexpessura">Expessura</label>
-                    <input type="number" name="expessura" id="iexpessura">
-                    <label for="ilargura">Largura</label>
-                    <input type="number" name="largura" id="ilargura">
-                    <button>Calcular</button>
-                    <input type="text" name="resultado" id="iresultado">
--->
-               
+                <label for="icomprimento">Comprimento(mm)</label>
+                <div class="c">C</div>
+                <input class="inputconfig" type="number" name="comprimento" id="icomprimento">
+                <label for="ialtura">Expessura(mm)</label>
+                <div class="c">E</div>
+                <input class="inputconfig" type="number" name="altura" id="ialtura">
+                <label for="ilargura">Largura(mm)</label>
+                <div class="c">L</div>
+                <input class="inputconfig" type="number" name="largura" id="ilargura">
+                <button class="botao" onclick="calcularMassaOuro()">CALCULAR</button>
+                <div class="resultado" id="res">Resultado</div>
+                
             </div>
 
-
-
-
-
         </div>
-
     </section>
+    <script src="js/teste2.js"></script>
 </body>
-
 </html>
