@@ -12,7 +12,7 @@ function somar() {
         for (var i = 1; i <= s; i++) {
             var imagem = document.createElement("img");
             imagem.src = "imagem.png";
-            imagem.width= '45';
+            imagem.width= '160';
             imagem.style.margin = '5px';
             container.appendChild(imagem);
         }
@@ -29,6 +29,7 @@ function limpar() {
     input1.value = "";
     input2.value = "";
     res.innerHTML = `<span style="color: yellow;">Resultado</span>`;
+    container.innerHTML = "";
 
     imagens.forEach(function(imagem) {
       imagem.remove();

@@ -4,6 +4,7 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Nunito', sans-serif; 
+    background-color: black;
 }
 
 
@@ -15,11 +16,13 @@
 }
 .cabeca h1{
     font-size: 24px;
+    color: white;
 }
 
 .cabeca h2{
     font-weight: bold;
     font-size: 16px;
+    color: white;
 }
 
 .conteudo{
@@ -28,7 +31,7 @@
 
 table {
     margin: auto;
-    width: 340px;
+    width: 360px;
     height: 150px;
     border-collapse: collapse; /*comando para unior as linhas da tabela tirando os espaços dando o formato de uma tabela de verdade*/
     border: 2px solid white;
@@ -51,18 +54,23 @@ td {
 }
 
 .inputs {
-    width: 150px;
+    width: 160px;
     height: 40px;
+    color: white;
 }
 
 .botao{
-    width: 120px;
+    width: 150px;
     height: 40px;
     font-weight: bold;
     background-color: rgb(60, 255, 0);
     border: 1px solid;
     border-radius: 5px;
+
 }
+.inputs::placeholder {
+    color: rgb(228, 228, 228);
+  }
 
 #res{
     color: white;
