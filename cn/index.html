@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabeca">
+        <h1>Se uma encomoda imagina várias</h1>
+        <h2>Faça o teste você mesmo</h2>
+    </header>
+    <section class="conteudo">
+        <table class="tabela">
+
+
+            <tr>
+
+                    <td>
+                        <input class="inputs" type="number" name="numero" id="numero1" placeholder="Digite o primeiro valor" required maxlength="3"> 
+                    </td>
+                    <td>
+                        <input class="inputs" type="number" name="numero" id="numero2" placeholder="Digite o segundo valor" required maxlength="3">
+                    </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <button type="submit" class="botao" onclick="somar()"> SOMAR</button>
+                    <button class="botao" onclick="limpar()"> LIMPAR</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div id="res"><span style="color: yellow;">Resultado</span></div>
+                </td>
+                    
+
+
+                
+            </tr>
+
+
+            <tr>
+                <td colspan="3">
+                    <div id="container"></td>
+                        
+                </td>
+                    
+
+
+                
+            </tr>
+
+
+            
+
+        </table>
+    
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
