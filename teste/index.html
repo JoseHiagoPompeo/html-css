@@ -14,54 +14,42 @@
 
 <body>
     <!--HEADER-->
-    <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container" id="corfundo" id="corfundo">
-                <a class="navbar-brand" href="#">
-                    <img class="img-fluid" src="imagens/logo.png" alt="geloijui">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <!--logo-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="imagens/logo.png" alt="">
+          </a>
 
-                <div class="row">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item d-flex align-items-center">
-                                <a class="nav-link active d-flex align-items-center me-2" aria-current="page" href="#">
-                                    <img class="me-1" src="imagens/house-door.svg" alt="">Inicial</a>
-                            </li>
-                            <li class="nav-item d-flex align-items-center me-2">
-                                <a class="nav-link d-flex align-items-center" aria-current="page" href="#">
-                                    <img class="me-1" src="imagens/whatsapp.svg" alt="">Contato</a>
-                            </li>
-                            <li class="nav-item d-flex align-items-center me-2">
-                                <a class="nav-link d-flex align-items-center" aria-current="page" href="#">
-                                    <img class="me-1" src="imagens/sobre.svg" alt="">Sobre</a>
-                            </li>
-                            <li class="nav-item dropdown d-flex align-items-center">
-                                <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img class="me-1" src="imagens/shop.svg" alt="cube"> Produtos
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Gelo 1kg</a></li>
-                                    <li><a class="dropdown-item" href="#">Gelo 2kg</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Mandioca</a></li>
-                                    <li><a class="dropdown-item" href="#">Hortelã</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+          <!--BOTAO-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+<!--LINK-->
+          <div class="collapse navbar-collapse color rounded-1" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item ms-2">
+                <a class="nav-link d-flex align-items-center" href="#">
+                    <img class="espacar" src="imagens/house-door.svg" alt="Inicio"> Inicio
+                </a>
+              </li>
+              <li class="nav-item dropdown ms-2">
+                <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img class="espacar" src="imagens/shop.svg" alt=""> Produtos
+                </a>
+                <ul class="dropdown-menu me-2">
+                  <li><a class="dropdown-item d-flex align-items-center" href="#"><img class="espacar" src="imagens/gelos.svg" alt=""> Gelo 1kg</a></li>
+                  <li><a class="dropdown-item d-flex align-items-center" href="#"><img class="espacar" src="imagens/gelo.svg" alt=""> Gelo 3kg</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </nav>
     <!--MAIN-->
 
 
