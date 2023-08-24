@@ -1,44 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedido</title>
-    <style>
-        body{
-            width: 100vw;
-            height: 100vh;
-            margin: 0px;
-            padding: 0px;
-            position: relative;
-
-        }
-
-        main{
-            margin: auto;
-            display: block;
-            text-decoration: none;
-            color: white;
-            font-size: 28px;
-            border-radius: 5px;
-            padding: 20px;
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);        
-        }
-
-    </style>
+    <title>Gelo Ijuí</title>
+    <link rel="shortcut icon" href="icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+    <header class="header-fundo">
+        <img src="logo-original.png" alt="Gelo Ijuí">
+        <img src="img/menu.svg" alt="menu">
+    </header>
+    <main class="produtos">
+        <h1>Produtos</h1>
+        <div class="item">
+            <div class="imagem">
+                <img src="img/produto1.png" alt="produto">
+                <p>Frete Grátis<br>Ijuí-RS</p>
+            </div>
 
-    <main>
+            <div class="descricao">
+                <h2>Gelo em cubos 1KG - unidade</h2>
+                <h3>R$ 1,99</h3>
+                <form id="formulario">
+                    <div class="botao">
+                        <input type="number" name="valor" id="valor" placeholder="Quantidade" required min="1">
+                        <button id="botao" type="submit"><img src="img/carrinho.svg" alt="botao">COMPRAR</button>
+                        <p>Estoque disponivel!</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="item">
+            <div class="imagem">
+                <img src="img/produto1.png" alt="produto">
+                <p>Frete Grátis<br>Ijuí-RS</p>
+            </div>
 
-           
-        
-        <a href="https://api.whatsapp.com/send?phone=5555991018742&text=PEDIDO%201%20SACO%20DE%20GELO%203KG"> <img src="img/saco.png" alt="gelo"></a>
-
+            <div class="descricao">
+                <h2>Gelo em cubos 3KG - unidade</h2>
+                <h3>R$ 4,99</h3>
+                <form id="formulario2">
+                    <div class="botao">
+                        <input type="number" name="valor2" id="valor2" placeholder="Quantidade" required min="1">
+                        <button id="botao2" type="submit"><img src="img/carrinho.svg" alt="botao">COMPRAR</button>
+                        <p>Estoque disponivel!</p>
+                    </div>
+                </form>
+            </div>
+        </div>
     </main>
+
+    <script>
+        //formulario1
+        var form = document.getElementById("formulario");
+        var link1 = "https://api.whatsapp.com/send?phone=5555991018742&text=Quero%20fazer%20um%20pedido%20de%20"
+        var link2 = "%20saco%20de%20gelo%20de%201%20Kg"
+        var valor = document.getElementById('valor')
+        var button = document.getElementById("botao");
+        form.addEventListener("submit", function (event) {
+
+            var link = link1 + valor.value + link2;
+            event.preventDefault();
+            window.location.href = link;
+        });
+        //formulario2
+        var form2 = document.getElementById("formulario2");
+        var link3 = "https://api.whatsapp.com/send?phone=5555991018742&text=Quero%20fazer%20um%20pedido%20de%20"
+        var link4 = "%20saco%20de%20gelo%20de%203%20Kg"
+        var valor2 = document.getElementById('valor2')
+        var button2 = document.getElementById("botao2");
+        form2.addEventListener("submit", function (event) {
+
+            var link2 = link3 + valor2.value + link4;
+            event.preventDefault();
+            window.location.href = link2;
+        });
+
+    </script>
 </body>
+
 </html>
