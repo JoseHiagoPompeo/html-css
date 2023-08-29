@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelo Ijuí</title>
+    <link rel="shortcut icon" href="icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header-fundo">
+        <img src="logo-original.png" alt="Gelo Ijuí">
+        <img src="img/menu.svg" alt="menu">
+    </header>
+    <main class="produtos">
+        <h1 id="sumir3">Produtos</h1>
+        <div id="sumir" class="item">
+            <div class="imagem">
+                <img src="img/produto1.png" alt="produto">
+                <p>Frete Grátis<br>Ijuí-RS</p>
+            </div>
+
+            <div class="descricao">
+                <h2>Gelo em cubos 1KG - unidade</h2>
+                <h3>R$ 1,99</h3>
+                <div class="botao">
+
+                    <div class="organizar">
+
+                        <input type="number" name="valor" id="valor" value="0">
+                        <button id="adicionarmais1" class="add"><img src="icons/+.svg" alt=""> </button>
+                        <button id="adicionarmenos1" class="add"><img src="icons/-.svg" alt=""> </button>
+                    </div>
+
+
+
+                    <button class="botaoadicionar" id="botao"><img src="img/carrinho.svg" alt="botao">ADICIONAR</button>
+                    <p>Estoque disponivel!</p>
+                </div>
+            </div>
+        </div>
+        <div id="sumir2" class="item">
+            <div class="imagem">
+                <img src="img/produto1.png" alt="produto">
+                <p>Frete Grátis<br>Ijuí-RS</p>
+            </div>
+
+            <div class="descricao">
+                <h2>Gelo em cubos 3KG - unidade</h2>
+                <h3>R$ 4,99</h3>
+                <div class="botao">
+
+                    <div class="organizar">
+
+                        <input type="number" name="valor" id="valor2" value="0">
+                        <button id="adicionarmais2" class="add"><img src="icons/+.svg" alt=""> </button>
+                        <button id="adicionarmenos2" class="add"><img src="icons/-.svg" alt=""> </button>
+                    </div>
+                    <button class="botaoadicionar" id="botao2"><img src="img/carrinho.svg"
+                            alt="botao">ADICIONAR</button>
+                    <p>Estoque disponivel!</p>
+                </div>
+            </div>
+        </div>
+        <div id="sumir4" class="carrinho">
+            <h1>Resumo da compra</h1>
+            <div class="caixa">
+                <div class="subcaixa">
+                    <p>Quantidade</p>
+                    <p id="res">0 Unidades</p>
+                </div>
+                <div class="subcaixa">
+                    <p>Frete</p>
+                    <p>Gratuito</p>
+                </div>
+                <div class="subcaixa fundo">
+                    <p>Total</p>
+                    <p id="resultado">R$ 0</p>
+                </div>
+            </div>
+            <button id="finalizar" class="finalizar">FINALIZAR COMPRA</button>
+        </div>
+        <div id="aparecer" class="formulario">
+            <h1>Informações para a entrega</h1>
+            <fieldset>
+                <legend>Dados pessoais</legend>                
+                    <p>
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome">
+                    </p>
+                    <p>
+                        <label for="bairro">Bairro</label>
+                        <input type="text" name="bairro" id="bairro" >
+                    </p>
+                        <label for="rua">Rua</label>
+                        <input type="text" name="rua" id="rua" >
+                    </p>
+
+                    <p>
+                        <label for="numero">N°</label>
+                        <input type="text" name="numero" id="numero">
+                    </p>
+                    <p>
+                        <label for="complemento">Complemento</label>
+                        <input type="text" name="complemento" id="complemento">
+                    </p>
+
+                
+                        <button id="compra" class="finalizar">FINALIZAR COMPRA</button>
+                    </p>
+                
+            </fieldset>
+        </div>
+
+    </main>
+
+
+
+    <footer id="carrinhodisplay">
+        <div id="carrinhorodape">
+
+        </div>
+    </footer>
+
+    <script>
+
+        var botaoAdicionar = document.getElementById('adicionarmais1')
+        var botaoSubtrair = document.getElementById('adicionarmenos1')
+        var botaoAdicionar2 = document.getElementById('adicionarmais2')
+        var botaoSubtrair2 = document.getElementById('adicionarmenos2')
+
+        var botaoconfirmar = document.getElementById('botao')
+        var botaoconfirmar2 = document.getElementById('botao2')
+
+        var carrinhodisplay = document.getElementById('carrinhodisplay')
+        var carrinhorodape = document.getElementById('carrinhorodape')
+
+
+        var valor = document.getElementById('valor')
+        var valor2 = document.getElementById('valor2')
+        var res = window.document.getElementById('res')
+        var resultado = window.document.getElementById('resultado')
+        var finalizar = document.getElementById('finalizar')
+        var compra = document.getElementById('compra')
+
+
+
+
+
+
+
+
+        botaoAdicionar.addEventListener("click", () => {
+            const valorAtual = parseInt(valor.value);
+            valor.value = valorAtual + 1;
+        });
+
+        botaoSubtrair.addEventListener("click", () => {
+            const valorAtual = parseInt(valor.value);
+            // Garante que o valor não seja menor que zero
+            if (valorAtual > 0) {
+                valor.value = valorAtual - 1;
+            }
+        });
+
+
+        botaoAdicionar2.addEventListener("click", () => {
+            const valorAtual = parseInt(valor2.value);
+            valor2.value = valorAtual + 1;
+        });
+
+        botaoSubtrair2.addEventListener("click", () => {
+            const valorAtual = parseInt(valor2.value);
+            // Garante que o valor não seja menor que zero
+            if (valorAtual > 0) {
+                valor2.value = valorAtual - 1;
+            }
+        });
+
+
+
+
+
+
+        botaoconfirmar.addEventListener("click", () => {
+            const valorAtual = parseInt(valor.value);
+            const valorAtual2 = parseInt(valor2.value);
+            const valorResultado = valorAtual + valorAtual2
+
+            const gelo1 = 1.99;
+            const gelo2 = 4.99;
+            const resultadogelo = valorAtual * gelo1
+            const resultadogelo2 = valorAtual2 * gelo2
+            const final = resultadogelo + resultadogelo2
+            const finalformatado = final.toFixed(2)
+
+           
+
+            resultado.innerText = `R$ ${finalformatado}`;
+            carrinhorodape.innerText = `Você adicionou ${valorResultado} iten(s) ao seu carrinho!`
+            res.innerText = `${valorResultado} Unidades`;
+
+    
+
+
+            if (valorAtual || valorAtual2 > 0) {
+                carrinhodisplay.style.display = "block";
+            } else { carrinhodisplay.style.display = "none"; }
+        });
+
+
+
+
+        botaoconfirmar2.addEventListener("click", () => {
+            const valorAtual = parseInt(valor.value);
+            const valorAtual2 = parseInt(valor2.value);
+            const valorResultado = valorAtual + valorAtual2
+
+
+            const gelo1 = 1.99;
+            const gelo2 = 4.99;
+            const resultadogelo = valorAtual * gelo1
+            const resultadogelo2 = valorAtual2 * gelo2
+            const final = resultadogelo + resultadogelo2
+            const finalformatado = final.toFixed(2)
+
+            resultado.innerText = `R$ ${finalformatado}`;
+            carrinhorodape.innerText = `Você adicionou ${valorResultado} iten(s) ao seu carrinho!`
+            res.innerText = `${valorResultado} Unidades`;
+
+
+            if (valorAtual || valorAtual2 > 0) {
+                carrinhodisplay.style.display = "block";
+            } else { carrinhodisplay.style.display = "none"; }
+        });
+
+
+             
+        const produtos = document.getElementById('sumir')
+        const produtos2 = document.getElementById('sumir2')
+        const produtos3 = document.getElementById('sumir3')
+        const produtos4 = document.getElementById('sumir4')
+        const produtos5 = document.getElementById('aparecer')
+        
+        finalizar.addEventListener("click", function(){
+            produtos.style.display = "none";
+            produtos2.style.display = "none";
+            produtos3.style.display = "none";
+            produtos4.style.display = "none";
+            produtos5.style.display = "block";
+
+
+        })
+        
+        
+        compra.addEventListener("click", function(){
+            const nome = document.getElementById('nome')
+            const bairro = document.getElementById('bairro')
+            const rua = document.getElementById('rua')
+            const numero = document.getElementById('numero')
+            const complemento = document.getElementById('complemento')
+
+
+
+
+
+
+
+
+
+
+            const valorAtual = parseInt(valor.value);
+            const valorAtual2 = parseInt(valor2.value);
+
+            const gelo1 = 1.99;
+            const gelo2 = 4.99;
+
+            const resultadogelo = valorAtual * gelo1
+            const resultadogelo2 = valorAtual2 * gelo2
+            const final = resultadogelo + resultadogelo2
+            const finalformatado = final.toFixed(2)
+
+            const linkbase = "https://wa.me//5555991018742?text="
+
+
+                  if (valorAtual > 0 && valorAtual2 > 0) {
+                      window.location.href = linkbase + "Olá%20me%20chamo%20" + nome.value + ".%20Quero%20comprar%20" + valorAtual + "%20pacote(s)%20de%20gelo%20de%201kg%20e%20também%20quero%20comprar%20" + valorAtual2 + "%20pacote(s)%20de%20gelo%20de%203kg.%20Para%20entregar%20no%20bairro:%20"+bairro.value+".%20Rua:%20"+rua.value+"%20no%20número%20"+numero.value+".-----Total%20a%20pagar%20R$" + finalformatado;
+                  } else if (valorAtual > 0) {
+                      window.location.href = linkbase + "Olá%20me%20chamo%20" + nome + ".%20Quero%20comprar%20" + valorAtual + "%20pacote(s)%20de%20gelo%20de%201kg.%20Valor%20total%20do%20pedido:%20R$" + finalformatado;
+                  } else if (valorAtual2 > 0) {
+                      window.location.href = linkbase + "Olá%20me%20chamo%20" + nome + ".%20Quero%20comprar%20" + valorAtual2 + "%20pacote(s)%20de%20gelo%20de%203kg.%20Valor%20total%20do%20pedido:%20R$" + finalformatado;
+                  }
+        })
+        
+
+    </script>
+</body>
+
+</html>
