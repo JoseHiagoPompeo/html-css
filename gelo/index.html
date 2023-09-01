@@ -85,32 +85,32 @@
         <div id="aparecer" class="formulario">
             <h1>Informações para a entrega</h1>
             <fieldset>
-                <legend>Dados pessoais</legend>                
-                    <p>
-                        <label for="nome">Nome</label><br>
-                        <input type="text" name="nome" id="nome">
-                    </p>
-                    <p>
-                        <label for="bairro">Bairro</label><br>
-                        <input type="text" name="bairro" id="bairro" >
-                    </p>
-                        <label for="rua">Rua</label><br>
-                        <input type="text" name="rua" id="rua" >
-                    </p>
+                <legend>Dados pessoais</legend>
+                <p>
+                    <label for="nome">Nome</label><br>
+                    <input type="text" name="nome" id="nome">
+                </p>
+                <p>
+                    <label for="bairro">Bairro</label><br>
+                    <input type="text" name="bairro" id="bairro">
+                </p>
+                <label for="rua">Rua</label><br>
+                <input type="text" name="rua" id="rua">
+                </p>
 
-                    <p>
-                        <label for="numero">N°</label><br>
-                        <input type="text" name="numero" id="numero">
-                    </p>
-                    <p>
-                        <label for="complemento">Complemento</label><br>
-                        <input type="text" name="complemento" id="complemento">
-                    </p>
+                <p>
+                    <label for="numero">N°</label><br>
+                    <input type="text" name="numero" id="numero">
+                </p>
+                <p>
+                    <label for="complemento">Complemento</label><br>
+                    <input type="text" name="complemento" id="complemento">
+                </p>
 
-                
-                        <button id="compra" class="finalizar">FINALIZAR COMPRA</button>
-                    </p>
-                
+
+                <button id="compra" class="finalizar">FINALIZAR COMPRA</button>
+                </p>
+
             </fieldset>
         </div>
 
@@ -196,13 +196,13 @@
             let final = resultadogelo + resultadogelo2
             let finalformatado = final.toFixed(2)
 
-           
+
 
             resultado.innerText = `R$ ${finalformatado}`;
             carrinhorodape.innerText = `Você adicionou ${valorResultado} iten(s) ao seu carrinho!`
             res.innerText = `${valorResultado} Unidades`;
 
-    
+
 
 
             if (valorAtual || valorAtual2 > 0) {
@@ -237,14 +237,14 @@
         });
 
 
-             
+
         let produtos = document.getElementById('sumir')
         let produtos2 = document.getElementById('sumir2')
         let produtos3 = document.getElementById('sumir3')
         let produtos4 = document.getElementById('sumir4')
         let produtos5 = document.getElementById('aparecer')
-        
-        finalizar.addEventListener("click", function(){
+
+        finalizar.addEventListener("click", function () {
             produtos.style.display = "none";
             produtos2.style.display = "none";
             produtos3.style.display = "none";
@@ -253,9 +253,9 @@
 
 
         })
-        
-        
-        compra.addEventListener("click", function(){
+
+
+        compra.addEventListener("click", function () {
             let nome = document.getElementById('nome')
             let bairro = document.getElementById('bairro')
             let rua = document.getElementById('rua')
@@ -275,21 +275,26 @@
             let final = resultadogelo + resultadogelo2
             let finalformatado = final.toFixed(2)
 
-            const linkbase = "https://wa.me//5555991018742?text="           
-            
-                  if (valorAtual > 0 && valorAtual2 > 0) {
-                      window.location.href = linkbase + "Olá%20me%20chamo%20" + nome.value + ".%20Quero%20comprar%20" + valorAtual + "%20pacote(s)%20de%20gelo%20de%201kg%20e%20também%20quero%20comprar%20" + valorAtual2 + "%20pacote(s)%20de%20gelo%20de%203kg.%20Para%20entregar%20no%20bairro:%20"+bairro.value+".%20Rua:%20"+rua.value+".%20Número:%20"+numero.value+".%20Complemento:%20"+complemento.value+".%20-----Total%20a%20pagar%20R$" + finalformatado;
-                  } else if (valorAtual > 0) {
-                    window.location.href = linkbase + "Olá%20me%20chamo%20" + nome.value + ".%20Quero%20comprar%20" + valorAtual + "%20pacote(s)%20de%20gelo%20de%201kg.%20Para%20entregar%20no%20bairro:%20"+bairro.value+".%20Rua:%20"+rua.value+".%20Número:%20"+numero.value+".%20Complemento:%20"+complemento.value+".%20-----Total%20a%20pagar%20R$" + finalformatado;
-                  } else if (valorAtual2 > 0) {
-                    window.location.href = linkbase + "Olá%20me%20chamo%20" + nome.value + ".%20Quero%20comprar%20" + valorAtual2 + "%20pacote(s)%20de%20gelo%20de%203kg.%20Para%20entregar%20no%20bairro:%20"+bairro.value+".%20Rua:%20"+rua.value+".%20Número:%20"+numero.value+".%20Complemento:%20"+complemento.value+".%20-----Total%20a%20pagar%20R$" + finalformatado;
-                  }
+            const linkbase = "https://wa.me//5555991018742?text="
+
+            if (valorAtual > 0 && valorAtual2 > 0) {
+                window.location.href = linkbase + "Olá%20me%20chamo%20" + nome.value + ".%20Quero%20comprar%20" + valorAtual + "%20pacote(s)%20de%20gelo%20de%201kg%20e%20também%20quero%20comprar%20" + valorAtual2 + "%20pacote(s)%20de%20gelo%20de%203kg.%20Para%20entregar%20no%20bairro:%20" + bairro.value + ".%20Rua:%20" + rua.value + ".%20Número:%20" + numero.value + ".%20Complemento:%20" + complemento.value + ".%20-----Total%20a%20pagar%20R$" + finalformatado;
+            } else if (valorAtual > 0) {
+                window.location.href = linkbase + "Olá%20me%20chamo%20" + nome.value + ".%20Quero%20comprar%20" + valorAtual + "%20pacote(s)%20de%20gelo%20de%201kg.%20Para%20entregar%20no%20bairro:%20" + bairro.value + ".%20Rua:%20" + rua.value + ".%20Número:%20" + numero.value + ".%20Complemento:%20" + complemento.value + ".%20-----Total%20a%20pagar%20R$" + finalformatado;
+            } else if (valorAtual2 > 0) {
+                window.location.href = linkbase + "Olá%20me%20chamo%20" + nome.value + ".%20Quero%20comprar%20" + valorAtual2 + "%20pacote(s)%20de%20gelo%20de%203kg.%20Para%20entregar%20no%20bairro:%20" + bairro.value + ".%20Rua:%20" + rua.value + ".%20Número:%20" + numero.value + ".%20Complemento:%20" + complemento.value + ".%20-----Total%20a%20pagar%20R$" + finalformatado;
+            }
         })
-        
 
 
-        window.onload = function () { alert("Está carregado!") } 
 
+        window.onload = function () {
+            nome = ""
+            bairro = ""
+            rua = ""
+            numero = ""
+            complemento = ""
+        }
 
     </script>
 </body>
