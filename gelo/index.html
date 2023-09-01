@@ -87,23 +87,23 @@
             <fieldset>
                 <legend>Dados pessoais</legend>                
                     <p>
-                        <label for="nome">Nome</label>
+                        <label for="nome">Nome</label><br>
                         <input type="text" name="nome" id="nome">
                     </p>
                     <p>
-                        <label for="bairro">Bairro</label>
+                        <label for="bairro">Bairro</label><br>
                         <input type="text" name="bairro" id="bairro" >
                     </p>
-                        <label for="rua">Rua</label>
+                        <label for="rua">Rua</label><br>
                         <input type="text" name="rua" id="rua" >
                     </p>
 
                     <p>
-                        <label for="numero">N°</label>
+                        <label for="numero">N°</label><br>
                         <input type="text" name="numero" id="numero">
                     </p>
                     <p>
-                        <label for="complemento">Complemento</label>
+                        <label for="complemento">Complemento</label><br>
                         <input type="text" name="complemento" id="complemento">
                     </p>
 
@@ -264,13 +264,6 @@
 
 
 
-
-
-
-
-
-
-
             const valorAtual = parseInt(valor.value);
             const valorAtual2 = parseInt(valor2.value);
 
@@ -282,15 +275,14 @@
             const final = resultadogelo + resultadogelo2
             const finalformatado = final.toFixed(2)
 
-            const linkbase = "https://wa.me//5555991018742?text="
-
-
+            const linkbase = "https://wa.me//5555991018742?text="           
+            
                   if (valorAtual > 0 && valorAtual2 > 0) {
-                      window.location.href = linkbase + "Olá%20me%20chamo%20" + nome.value + ".%20Quero%20comprar%20" + valorAtual + "%20pacote(s)%20de%20gelo%20de%201kg%20e%20também%20quero%20comprar%20" + valorAtual2 + "%20pacote(s)%20de%20gelo%20de%203kg.%20Para%20entregar%20no%20bairro:%20"+bairro.value+".%20Rua:%20"+rua.value+"%20no%20número%20"+numero.value+".-----Total%20a%20pagar%20R$" + finalformatado;
+                      window.location.href = linkbase + "Olá%20me%20chamo%20" + nome.value + ".%20Quero%20comprar%20" + valorAtual + "%20pacote(s)%20de%20gelo%20de%201kg%20e%20também%20quero%20comprar%20" + valorAtual2 + "%20pacote(s)%20de%20gelo%20de%203kg.%20Para%20entregar%20no%20bairro:%20"+bairro.value+".%20Rua:%20"+rua.value+".%20Número:%20"+numero.value+".%20Complemento:%20"+complemento.value+".%20-----Total%20a%20pagar%20R$" + finalformatado;
                   } else if (valorAtual > 0) {
-                      window.location.href = linkbase + "Olá%20me%20chamo%20" + nome + ".%20Quero%20comprar%20" + valorAtual + "%20pacote(s)%20de%20gelo%20de%201kg.%20Valor%20total%20do%20pedido:%20R$" + finalformatado;
+                    window.location.href = linkbase + "Olá%20me%20chamo%20" + nome.value + ".%20Quero%20comprar%20" + valorAtual + "%20pacote(s)%20de%20gelo%20de%201kg.%20Para%20entregar%20no%20bairro:%20"+bairro.value+".%20Rua:%20"+rua.value+".%20Número:%20"+numero.value+".%20Complemento:%20"+complemento.value+".%20-----Total%20a%20pagar%20R$" + finalformatado;
                   } else if (valorAtual2 > 0) {
-                      window.location.href = linkbase + "Olá%20me%20chamo%20" + nome + ".%20Quero%20comprar%20" + valorAtual2 + "%20pacote(s)%20de%20gelo%20de%203kg.%20Valor%20total%20do%20pedido:%20R$" + finalformatado;
+                    window.location.href = linkbase + "Olá%20me%20chamo%20" + nome.value + ".%20Quero%20comprar%20" + valorAtual2 + "%20pacote(s)%20de%20gelo%20de%203kg.%20Para%20entregar%20no%20bairro:%20"+bairro.value+".%20Rua:%20"+rua.value+".%20Número:%20"+numero.value+".%20Complemento:%20"+complemento.value+".%20-----Total%20a%20pagar%20R$" + finalformatado;
                   }
         })
         

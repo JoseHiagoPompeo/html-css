@@ -83,8 +83,10 @@ body {
 .botao input {
     color: black;
     height: 30px;
-    max-width: 105px;
+    margin-top: 20px;
+    width: 100%;
     text-align: center;
+    min-width: 100px;
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
@@ -95,8 +97,10 @@ body {
 }
 
 .add {
+    margin-top: 20px;
+    padding: 0px 10px;
     height: 30px;
-    width: 50px;
+    width: 100%;
     margin-left: 10px;
     border: 0px;
     display: flex;
@@ -107,6 +111,7 @@ body {
     cursor: pointer;
 
 }
+
 
 
 
@@ -132,6 +137,7 @@ body {
 
 .botao p {
     padding-top: 35px;
+    text-align: right;
     font-size: 14px;
     font-weight: bold;
     color: #9D9D9D;
@@ -145,10 +151,16 @@ body {
 }
 
 
+
+.imagem img{
+    width: 100%;
+}
+
+
 .imagem p {
     margin-top: 30px;
     justify-items: end;
-    color: #04C300;
+    color: #03b800;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: bold;
@@ -202,7 +214,7 @@ body {
     color: white;
     font-size: 16px;
     font-weight: bold;
-    margin: 20px 0px;
+    margin: 20px 0px 10px 0px;
     cursor: pointer;
 }
 
@@ -232,10 +244,32 @@ footer {
 
 #carrinhorodape{
     font-size: 16px;
+    color: rgb(0, 60, 255);
 }
 
 
 .formulario{
     display: none;
+
     
+}
+
+.formulario input{
+    height: 2em;
+    padding-left: 10px;
+    margin-top: 5px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.171);
+}
+
+.formulario p{
+    margin-bottom: 20px;
+}
+
+
+.formulario fieldset{
+    padding: 20px;
+    border: 1px solid rgb(129, 129, 129);
 }
