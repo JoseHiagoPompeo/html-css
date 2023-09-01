@@ -185,16 +185,16 @@
 
 
         botaoconfirmar.addEventListener("click", () => {
-            const valorAtual = parseInt(valor.value);
-            const valorAtual2 = parseInt(valor2.value);
-            const valorResultado = valorAtual + valorAtual2
+            let valorAtual = parseInt(valor.value);
+            let valorAtual2 = parseInt(valor2.value);
+            let valorResultado = valorAtual + valorAtual2
 
-            const gelo1 = 1.99;
-            const gelo2 = 4.99;
-            const resultadogelo = valorAtual * gelo1
-            const resultadogelo2 = valorAtual2 * gelo2
-            const final = resultadogelo + resultadogelo2
-            const finalformatado = final.toFixed(2)
+            let gelo1 = 1.99;
+            let gelo2 = 4.99;
+            let resultadogelo = valorAtual * gelo1
+            let resultadogelo2 = valorAtual2 * gelo2
+            let final = resultadogelo + resultadogelo2
+            let finalformatado = final.toFixed(2)
 
            
 
@@ -214,17 +214,17 @@
 
 
         botaoconfirmar2.addEventListener("click", () => {
-            const valorAtual = parseInt(valor.value);
-            const valorAtual2 = parseInt(valor2.value);
-            const valorResultado = valorAtual + valorAtual2
+            let valorAtual = parseInt(valor.value);
+            let valorAtual2 = parseInt(valor2.value);
+            let valorResultado = valorAtual + valorAtual2
 
 
-            const gelo1 = 1.99;
-            const gelo2 = 4.99;
-            const resultadogelo = valorAtual * gelo1
-            const resultadogelo2 = valorAtual2 * gelo2
-            const final = resultadogelo + resultadogelo2
-            const finalformatado = final.toFixed(2)
+            let gelo1 = 1.99;
+            let gelo2 = 4.99;
+            let resultadogelo = valorAtual * gelo1
+            let resultadogelo2 = valorAtual2 * gelo2
+            let final = resultadogelo + resultadogelo2
+            let finalformatado = final.toFixed(2)
 
             resultado.innerText = `R$ ${finalformatado}`;
             carrinhorodape.innerText = `Você adicionou ${valorResultado} iten(s) ao seu carrinho!`
@@ -238,11 +238,11 @@
 
 
              
-        const produtos = document.getElementById('sumir')
-        const produtos2 = document.getElementById('sumir2')
-        const produtos3 = document.getElementById('sumir3')
-        const produtos4 = document.getElementById('sumir4')
-        const produtos5 = document.getElementById('aparecer')
+        let produtos = document.getElementById('sumir')
+        let produtos2 = document.getElementById('sumir2')
+        let produtos3 = document.getElementById('sumir3')
+        let produtos4 = document.getElementById('sumir4')
+        let produtos5 = document.getElementById('aparecer')
         
         finalizar.addEventListener("click", function(){
             produtos.style.display = "none";
@@ -256,24 +256,24 @@
         
         
         compra.addEventListener("click", function(){
-            const nome = document.getElementById('nome')
-            const bairro = document.getElementById('bairro')
-            const rua = document.getElementById('rua')
-            const numero = document.getElementById('numero')
-            const complemento = document.getElementById('complemento')
+            let nome = document.getElementById('nome')
+            let bairro = document.getElementById('bairro')
+            let rua = document.getElementById('rua')
+            let numero = document.getElementById('numero')
+            let complemento = document.getElementById('complemento')
 
 
 
-            const valorAtual = parseInt(valor.value);
-            const valorAtual2 = parseInt(valor2.value);
+            let valorAtual = parseInt(valor.value);
+            let valorAtual2 = parseInt(valor2.value);
 
             const gelo1 = 1.99;
             const gelo2 = 4.99;
 
-            const resultadogelo = valorAtual * gelo1
-            const resultadogelo2 = valorAtual2 * gelo2
-            const final = resultadogelo + resultadogelo2
-            const finalformatado = final.toFixed(2)
+            let resultadogelo = valorAtual * gelo1
+            let resultadogelo2 = valorAtual2 * gelo2
+            let final = resultadogelo + resultadogelo2
+            let finalformatado = final.toFixed(2)
 
             const linkbase = "https://wa.me//5555991018742?text="           
             
@@ -286,6 +286,10 @@
                   }
         })
         
+
+
+        window.onload = function () { alert("Está carregado!") } 
+
 
     </script>
 </body>
