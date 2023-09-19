@@ -136,13 +136,12 @@ body {
 }
 
 
-.botao p {
-    padding-top: 35px;
+.descricao p {
+
     text-align: right;
     font-size: 14px;
     font-weight: bold;
     color: #a7a7a7;
-    justify-items: end;
 }
 
 
