@@ -214,7 +214,7 @@ body {
     color: white;
     font-size: 16px;
     font-weight: bold;
-    margin: 20px 0px 10px 0px;
+    margin: 20px 0px 0px 0px;
     cursor: pointer;
 }
 
@@ -243,8 +243,9 @@ footer {
 }
 
 #carrinhorodape{
-    font-size: 16px;
+    font-size: 18px;
     color: rgb(0, 60, 255);
+    margin-top: -4px;
 }
 
 
@@ -265,7 +266,7 @@ footer {
 }
 
 .formulario p{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 

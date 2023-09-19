@@ -88,27 +88,13 @@
                 <legend>Dados pessoais</legend>
                 <p>
                     <label for="nome">Nome</label><br>
-                    <input type="text" name="nome" id="nome">
+                    <input type="text" name="nome" id="nome" placeholder="Seu nome">
                 </p>
                 <p>
-                    <label for="bairro">Bairro</label><br>
-                    <input type="text" name="bairro" id="bairro">
+                    <button id="compra" class="finalizar">FINALIZAR COMPRA</button>
                 </p>
-                <label for="rua">Rua</label><br>
-                <input type="text" name="rua" id="rua">
-                </p>
+                <p style="color: red;" id="aviso">
 
-                <p>
-                    <label for="numero">N°</label><br>
-                    <input type="text" name="numero" id="numero">
-                </p>
-                <p>
-                    <label for="complemento">Complemento</label><br>
-                    <input type="text" name="complemento" id="complemento">
-                </p>
-
-
-                <button id="compra" class="finalizar">FINALIZAR COMPRA</button>
                 </p>
 
             </fieldset>
@@ -245,24 +231,25 @@
         let produtos5 = document.getElementById('aparecer')
 
         finalizar.addEventListener("click", function () {
-            produtos.style.display = "none";
-            produtos2.style.display = "none";
-            produtos3.style.display = "none";
-            produtos4.style.display = "none";
-            produtos5.style.display = "block";
-
+            let valorAtual = parseInt(valor.value);
+            let valorAtual2 = parseInt(valor2.value);
+            if (valorAtual == 0 && valorAtual2 == 0) {
+                carrinhodisplay.style.display = "block";
+                carrinhorodape.innerText = `Adicione um item ao carrinho para continuar!`
+            } else {
+                produtos.style.display = "none";
+                produtos2.style.display = "none";
+                produtos3.style.display = "none";
+                produtos4.style.display = "none";
+                produtos5.style.display = "block";
+            }
 
         })
 
 
         compra.addEventListener("click", function () {
+            let aviso = document.getElementById('aviso')
             let nome = document.getElementById('nome')
-            let bairro = document.getElementById('bairro')
-            let rua = document.getElementById('rua')
-            let numero = document.getElementById('numero')
-            let complemento = document.getElementById('complemento')
-
-
 
             let valorAtual = parseInt(valor.value);
             let valorAtual2 = parseInt(valor2.value);
@@ -275,26 +262,50 @@
             let final = resultadogelo + resultadogelo2
             let finalformatado = final.toFixed(2)
 
-            const linkbase = "https://wa.me//5555991018742?text="
+            const linkbase = "https://wa.me//5555991018742?text=";
 
-            if (valorAtual > 0 && valorAtual2 > 0) {
-                window.location.href = linkbase + "Olá%20me%20chamo%20" + nome.value + ".%20Quero%20comprar%20" + valorAtual + "%20pacote(s)%20de%20gelo%20de%201kg%20e%20também%20quero%20comprar%20" + valorAtual2 + "%20pacote(s)%20de%20gelo%20de%203kg.%20Para%20entregar%20no%20bairro:%20" + bairro.value + ".%20Rua:%20" + rua.value + ".%20Número:%20" + numero.value + ".%20Complemento:%20" + complemento.value + ".%20-----Total%20a%20pagar%20R$" + finalformatado;
+            if (nome.value == "") {
+                aviso.innerText = "Por favor digite um nome!"
+            } else if (valorAtual > 0 && valorAtual2 > 0) {
+                //produtos5.style.display = "none";
+                aviso.style.fontSize = "18px"
+                aviso.style.textAlign = "center"
+                aviso.style.color = 'blue';
+                aviso.innerText = `Agradecemos o seu pedido ${nome.value}`
+                setTimeout(function () {
+                    window.location.href = linkbase + "Olá%20me%20chamo%20" + nome.value + ".%20Quero%20comprar%20" + valorAtual + "%20pacote(s)%20de%20gelo%20de%201kg%20e%20também%20quero%20comprar%20" + valorAtual2 + "%20pacote(s)%20de%20gelo%20de%203kg.%20-----%20Total%20a%20pagar%20R$" + finalformatado;
+                }, 2000); // 5000 milissegundos = 5 segundos
+                valor.value = 0;
+                valor2.value = 0;
             } else if (valorAtual > 0) {
-                window.location.href = linkbase + "Olá%20me%20chamo%20" + nome.value + ".%20Quero%20comprar%20" + valorAtual + "%20pacote(s)%20de%20gelo%20de%201kg.%20Para%20entregar%20no%20bairro:%20" + bairro.value + ".%20Rua:%20" + rua.value + ".%20Número:%20" + numero.value + ".%20Complemento:%20" + complemento.value + ".%20-----Total%20a%20pagar%20R$" + finalformatado;
+                 //produtos5.style.display = "none";
+                 aviso.style.fontSize = "18px"
+                aviso.style.textAlign = "center"
+                aviso.style.color = 'blue';
+                aviso.innerText = `Agradecemos o seu pedido ${nome.value}`
+                setTimeout(function () {
+                    window.location.href = linkbase + "Olá%20me%20chamo%20" + nome.value + ".%20Quero%20comprar%20" + valorAtual + "%20pacote(s)%20de%20gelo%20de%201kg.%20-----%20Total%20a%20pagar%20R$" + finalformatado;
+                }, 2000); // 5000 milissegundos = 5 segundos
+                valor.value = 0;
+                valor2.value = 0;
+                
             } else if (valorAtual2 > 0) {
-                window.location.href = linkbase + "Olá%20me%20chamo%20" + nome.value + ".%20Quero%20comprar%20" + valorAtual2 + "%20pacote(s)%20de%20gelo%20de%203kg.%20Para%20entregar%20no%20bairro:%20" + bairro.value + ".%20Rua:%20" + rua.value + ".%20Número:%20" + numero.value + ".%20Complemento:%20" + complemento.value + ".%20-----Total%20a%20pagar%20R$" + finalformatado;
+                 //produtos5.style.display = "none";
+                 aviso.style.fontSize = "18px"
+                aviso.style.textAlign = "center"
+                aviso.style.color = 'blue';
+                aviso.innerText = `Agradecemos o seu pedido ${nome.value}`
+                setTimeout(function () {
+                    window.location.href = linkbase + "Olá%20me%20chamo%20" + nome.value + ".%20Quero%20comprar%20" + valorAtual2 + "%20pacote(s)%20de%20gelo%20de%203kg.%20-----%20Total%20a%20pagar%20R$" + finalformatado;
+                }, 2000); // 5000 milissegundos = 5 segundos
+                valor.value = 0;
+                valor2.value = 0;
+               
             }
-        })
-
-
-
-        window.onload = function () {
-            nome = ""
-            bairro = ""
-            rua = ""
-            numero = ""
-            complemento = ""
         }
+        )
+
+
 
     </script>
 </body>
