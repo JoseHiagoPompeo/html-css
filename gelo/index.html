@@ -11,7 +11,8 @@
 
 <body>
     <header class="header-fundo">
-        <img src="logo-original.png" alt="Gelo Ijuí">
+        <a href="index.html"><img src="logo-original.png" alt="Gelo Ijuí"></a>
+
         <img src="img/menu.svg" alt="menu">
     </header>
     <main class="produtos">
@@ -37,7 +38,7 @@
 
 
                     <button class="botaoadicionar" id="botao"><img src="img/carrinho.svg" alt="botao">ADICIONAR</button>
-                    <p>Estoque disponivel!</p>
+                    <p>Estoque disponível</p>
                 </div>
             </div>
         </div>
@@ -60,7 +61,7 @@
                     </div>
                     <button class="botaoadicionar" id="botao2"><img src="img/carrinho.svg"
                             alt="botao">ADICIONAR</button>
-                    <p>Estoque disponivel!</p>
+                    <p>Estoque disponível</p>
                 </div>
             </div>
         </div>
@@ -93,11 +94,16 @@
                 <p>
                     <button id="compra" class="finalizar">FINALIZAR COMPRA</button>
                 </p>
-                <p style="color: red;" id="aviso">
+                <div id="aviso">
 
-                </p>
-
+                </div>
             </fieldset>
+        </div>
+        <div id="mensagemsucesso">
+
+        </div>
+        <div id="agradecimento">
+
         </div>
 
     </main>
@@ -105,9 +111,7 @@
 
 
     <footer id="carrinhodisplay">
-        <div id="carrinhorodape">
-
-        </div>
+        <p id="carrinhorodape"></p>
     </footer>
 
     <script>
@@ -249,6 +253,8 @@
 
         compra.addEventListener("click", function () {
             let aviso = document.getElementById('aviso')
+            let mensagemsucesso = document.getElementById('mensagemsucesso')
+            let agradecimento = document.getElementById('agradecimento')
             let nome = document.getElementById('nome')
 
             let valorAtual = parseInt(valor.value);
@@ -265,42 +271,62 @@
             const linkbase = "https://wa.me//5555991018742?text=";
 
             if (nome.value == "") {
-                aviso.innerText = "Por favor digite um nome!"
-            } else if (valorAtual > 0 && valorAtual2 > 0) {
-                //produtos5.style.display = "none";
-                aviso.style.fontSize = "18px"
                 aviso.style.textAlign = "center"
-                aviso.style.color = 'blue';
-                aviso.innerText = `Agradecemos o seu pedido ${nome.value}`
+                aviso.style.color = 'red';
+                aviso.innerText = "Por favor, digite um nome valido!"
+            } else if (valorAtual > 0 && valorAtual2 > 0) {
+                carrinhodisplay.style.display = "none";
+                produtos5.style.display = "none";
+                var imagem = document.createElement("img");
+                imagem.src = "img/agradecer.jpg";
+                imagem.style.maxWidth = '100%'
+                imagem.style.margin = '5px';
+                mensagemsucesso.appendChild(imagem);
+                agradecimento.style.fontSize = "22px"
+                agradecimento.style.textAlign = "center"
+                agradecimento.style.color = 'blue';
+                agradecimento.innerText = `Agradecemos o seu pedido ${nome.value}`
                 setTimeout(function () {
                     window.location.href = linkbase + "Olá%20me%20chamo%20" + nome.value + ".%20Quero%20comprar%20" + valorAtual + "%20pacote(s)%20de%20gelo%20de%201kg%20e%20também%20quero%20comprar%20" + valorAtual2 + "%20pacote(s)%20de%20gelo%20de%203kg.%20-----%20Total%20a%20pagar%20R$" + finalformatado;
-                }, 2000); // 5000 milissegundos = 5 segundos
+                }, 3000); // 5000 milissegundos = 5 segundos
                 valor.value = 0;
                 valor2.value = 0;
             } else if (valorAtual > 0) {
-                 //produtos5.style.display = "none";
-                 aviso.style.fontSize = "18px"
-                aviso.style.textAlign = "center"
-                aviso.style.color = 'blue';
-                aviso.innerText = `Agradecemos o seu pedido ${nome.value}`
+                carrinhodisplay.style.display = "none";
+                produtos5.style.display = "none";
+                var imagem = document.createElement("img");
+                imagem.src = "img/agradecer.jpg";
+                imagem.style.maxWidth = '100%'
+                imagem.style.margin = '5px';
+                mensagemsucesso.appendChild(imagem);
+                agradecimento.style.fontSize = "22px"
+                agradecimento.style.textAlign = "center"
+                agradecimento.style.color = 'blue';
+                agradecimento.innerText = `Agradecemos o seu pedido ${nome.value}`
                 setTimeout(function () {
                     window.location.href = linkbase + "Olá%20me%20chamo%20" + nome.value + ".%20Quero%20comprar%20" + valorAtual + "%20pacote(s)%20de%20gelo%20de%201kg.%20-----%20Total%20a%20pagar%20R$" + finalformatado;
-                }, 2000); // 5000 milissegundos = 5 segundos
+                }, 3000); // 5000 milissegundos = 5 segundos
                 valor.value = 0;
                 valor2.value = 0;
-                
+
             } else if (valorAtual2 > 0) {
-                 //produtos5.style.display = "none";
-                 aviso.style.fontSize = "18px"
-                aviso.style.textAlign = "center"
-                aviso.style.color = 'blue';
-                aviso.innerText = `Agradecemos o seu pedido ${nome.value}`
+                carrinhodisplay.style.display = "none";
+                produtos5.style.display = "none";
+                var imagem = document.createElement("img");
+                imagem.src = "img/agradecer.jpg";
+                imagem.style.maxWidth = '100%'
+                imagem.style.margin = '5px';
+                mensagemsucesso.appendChild(imagem);
+                agradecimento.style.fontSize = "22px"
+                agradecimento.style.textAlign = "center"
+                agradecimento.style.color = 'blue';
+                agradecimento.innerText = `Agradecemos o seu pedido ${nome.value}`
                 setTimeout(function () {
                     window.location.href = linkbase + "Olá%20me%20chamo%20" + nome.value + ".%20Quero%20comprar%20" + valorAtual2 + "%20pacote(s)%20de%20gelo%20de%203kg.%20-----%20Total%20a%20pagar%20R$" + finalformatado;
-                }, 2000); // 5000 milissegundos = 5 segundos
+                }, 3000); // 5000 milissegundos = 5 segundos
                 valor.value = 0;
                 valor2.value = 0;
-               
+
             }
         }
         )

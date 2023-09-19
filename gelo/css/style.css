@@ -24,6 +24,7 @@ body {
     background-color: #F5F5F5;
     margin: 0 auto;
     padding: 20px;
+    min-height: 90vh;
 }
 
 .produtos h1 {
@@ -91,7 +92,7 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
     border: 0px;
-    background-color: rgb(238, 238, 238);
+    background-color: #f0f0f0;
 
 
 }
@@ -107,7 +108,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    background-color: rgb(238, 238, 238);
+    background-color: #f0f0f0;
     cursor: pointer;
 
 }
@@ -140,7 +141,7 @@ body {
     text-align: right;
     font-size: 14px;
     font-weight: bold;
-    color: #9D9D9D;
+    color: #a7a7a7;
     justify-items: end;
 }
 
@@ -214,7 +215,7 @@ body {
     color: white;
     font-size: 16px;
     font-weight: bold;
-    margin: 20px 0px 0px 0px;
+    margin: 20px 0px 4px 0px;
     cursor: pointer;
 }
 
@@ -223,40 +224,36 @@ body {
 
 
 
-footer {
+#carrinhodisplay {
     display: none;
     background-color: #f5f5f5;
     text-align: center;
     border-top: solid 1px Gray;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
     width: 100%;
-    height: 50px;
-    color: Black;
+    height: 40px;
     position: fixed;
     bottom: 0px;
     left: 0px;
-    padding: 20px;
-
-
+    padding-top: 12px;
 }
+
 
 #carrinhorodape{
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: bold;
     color: rgb(0, 60, 255);
-    margin-top: -4px;
 }
+
 
 
 .formulario{
     display: none;
-
     
 }
 
 .formulario input{
-    height: 2em;
+    height: 2.2em;
+    font-size: 16px;
     padding-left: 10px;
     margin-top: 5px;
     width: 100%;
@@ -265,9 +262,7 @@ footer {
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.171);
 }
 
-.formulario p{
-    margin-bottom: 10px;
-}
+
 
 
 .formulario fieldset{
