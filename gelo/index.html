@@ -10,10 +10,33 @@
 </head>
 
 <body>
-    <header class="header-fundo">
-        <a href="index.html"><img src="logo-original.png" alt="Gelo Ijuí"></a>
+    <header>
+        <nav class="nav-bar">
+        <div class="logo">
+            <a href="index.html"><img src="logo-original.png" alt="Gelo Ijuí"></a>
+        </div>
+        <div class="nav-list">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Produtos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+            </ul>
+            
+        </div>
+        <div class="mobile-menu-icon">
+            <button onclick="menushow()"><img class="icon" src="img/menu-open.svg" alt="menu"></button>
+        </div>
+    </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Produtos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+            </ul>
+        </div>
 
-        <img src="img/menu.svg" alt="menu">
+
+
     </header>
     <main class="produtos">
         <h1 id="sumir3">Produtos</h1>
@@ -27,19 +50,16 @@
                 <h2>Gelo em cubos 1KG - unidade</h2>
                 <h3>R$ 1,99</h3>
                 <div class="botao">
-
                     <div class="organizar">
-
                         <input type="number" name="valor" id="valor" value="0" min="0">
                         <button id="adicionarmais1" class="add"><img src="icons/+.svg" alt=""> </button>
                         <button id="adicionarmenos1" class="add"><img src="icons/-.svg" alt=""> </button>
                     </div>
-
                     <button class="botaoadicionar" id="botao"><img src="img/carrinho.svg" alt="botao">ADICIONAR</button>
-
                 </div>
                 <p>Estoque disponível</p>
             </div>
+
         </div>
         <div id="sumir2" class="item">
             <div class="imagem">
@@ -51,7 +71,6 @@
                 <h2>Gelo em cubos 3KG - unidade</h2>
                 <h3>R$ 4,99</h3>
                 <div class="botao">
-
                     <div class="organizar">
 
                         <input type="number" name="valor" id="valor2" value="0" min="0">
@@ -64,9 +83,6 @@
                 <p>Estoque disponível</p>
             </div>
         </div>
-
-
-
         <div id="sumir4" class="carrinho">
             <h1>CARRINHO</h1>
             <table>
@@ -82,24 +98,6 @@
                     </tr>
                 </thead>
             </table>
-
-
-            <!--
-            <div class="caixa">
-                <div class="subcaixa">
-                    <p>ITEM</p>
-                    <p id="res">0 Unidades</p>
-                </div>
-                <div class="subcaixa">
-                    <p id="containerr">Frete</p>
-                    <p>Gratuito</p>
-                </div>
-                <div class="subcaixa fundo">
-                    <p>Total</p>
-                    <p id="resultado">R$ 0</p>
-                </div>
-            </div>
-            -->
             <button id="finalizar" class="finalizar">FINALIZAR COMPRA</button>
         </div>
         <div id="aparecer" class="formulario">
@@ -135,6 +133,22 @@
     </footer>
 
     <script>
+
+       
+        function menushow() {
+    let menuMobile = document.querySelector('.mobile-menu');
+    if (menuMobile.classList.contains('open')) {
+        menuMobile.classList.remove('open');
+        document.querySelector('.icon').src = "img/menu-open.svg";
+    } else {
+        menuMobile.classList.add('open');
+        document.querySelector('.icon').src = "img/menu-closed.svg";
+    }
+}
+
+
+
+
 
         var botaoAdicionar = document.getElementById('adicionarmais1')
         var botaoSubtrair = document.getElementById('adicionarmenos1')
