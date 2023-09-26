@@ -30,12 +30,10 @@
 
                     <div class="organizar">
 
-                        <input type="number" name="valor" id="valor" value="0">
+                        <input type="number" name="valor" id="valor" value="0" min="0">
                         <button id="adicionarmais1" class="add"><img src="icons/+.svg" alt=""> </button>
                         <button id="adicionarmenos1" class="add"><img src="icons/-.svg" alt=""> </button>
                     </div>
-
-
 
                     <button class="botaoadicionar" id="botao"><img src="img/carrinho.svg" alt="botao">ADICIONAR</button>
 
@@ -56,7 +54,7 @@
 
                     <div class="organizar">
 
-                        <input type="number" name="valor" id="valor2" value="0">
+                        <input type="number" name="valor" id="valor2" value="0" min="0">
                         <button id="adicionarmais2" class="add"><img src="icons/+.svg" alt=""> </button>
                         <button id="adicionarmenos2" class="add"><img src="icons/-.svg" alt=""> </button>
                     </div>
@@ -69,17 +67,11 @@
 
 
 
-
-
-
-
-
-
         <div id="sumir4" class="carrinho">
             <h1>CARRINHO</h1>
             <table>
                 <thead>
-                    <tr>
+                    <tr class="bordinha">
                         <th colspan="2">ITEM</th>
                         <th>QUANTIDADE</th>
                         <th>PREÇO</th>
@@ -119,7 +111,8 @@
                     <input type="text" name="nome" id="nome" placeholder="Seu nome" autocomplete="username">
                 </p>
                 <p>
-                    <button id="compra" class="finalizar">FINALIZAR COMPRA</button>
+                    <button id="compra" class="finalizar">FINALIZAR COMPRA <img src="img/iconwhats.svg"
+                        alt="botao"></button>
                 </p>
                 <div id="aviso">
 
@@ -371,7 +364,7 @@
                 containerr.innerHTML = `
 
             <td><img style="max-width:60px" src="miniatura.png"></td>
-            <td><strong>Gelo 3KG</strong></td>
+            <td><strong>Gelo 1KG</strong></td>
             <td>${valorAtual}</td>
             <td>R$${resultadogelo.toFixed(2)}</td>
             
@@ -467,7 +460,7 @@
                 produtos.style.display = "none";
                 produtos2.style.display = "none";
                 produtos3.style.display = "none";
-                produtos4.style.display = "none";
+                produtos4.style.display = "none"; 
                 produtos5.style.display = "block";
             }
 
