@@ -63,16 +63,12 @@ body {
 /*MENU*/
 .mobile-menu {
     display: none;
-    padding: 0px 20px;
-}
-.mobile-menu li{
-    
+    padding-right: 20px;
 }
 
 .mobile-menu li a:hover{
     background-color: #2c308f;
     color: white;
- 
 }
 
 .mobile-menu a{
@@ -200,8 +196,9 @@ body {
     border: 0px;
     background-color: #f0f0f0;
     padding: 0px 20px;
-
-
+}
+.botao input:hover{
+    background-color: #dfdfdf;
 }
 
 .add {
@@ -218,8 +215,11 @@ body {
     border-radius: 5px;
     background-color: #f0f0f0;
     cursor: pointer;
-
 }
+.add:hover{
+    background-color: #dfdfdf;
+}
+
 
 
 .botaoadicionar {
@@ -237,6 +237,10 @@ body {
     font-weight: bold;
     margin-bottom: 20px;
     cursor: pointer;
+}
+
+.botaoadicionar:hover{
+    background: linear-gradient(180deg, #0089c4 0%, #0076a8 100%);
 }
 
 
