@@ -386,15 +386,14 @@ td {
   border-radius: 10px;
   cursor: pointer;
   transition: 0.5s;
+  display: none;
 }
 
 .manual-btn:not(:last-child){
   margin-right: 40px;
 }
 
-.manual-btn:hover{
-  background-color: white;
-}
+
 
 #radio1:checked ~ .first {
   margin-left: 0;
@@ -416,6 +415,7 @@ td {
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
+  display: none;
   transition: 1s;
 }
 
@@ -425,6 +425,7 @@ td {
   margin-top: 517px;
   display: flex;
   justify-content: center;
+  display: none;
 }
 
 .navigation-auto div:not(:last-child){
