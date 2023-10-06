@@ -55,7 +55,7 @@ body {
 }
 
 .mobile-menu-icon {
-  padding-top: 1.1rem;
+  padding-top: 0.6rem;
   display: none;
 }
 
@@ -84,6 +84,9 @@ body {
   .nav-bar {
     padding: 10px 20px;
     /*esse é o header que muda de tamanho quando a tela estiver em 650px*/
+  }
+  .logo img{
+    width: 120px;
   }
 
   .nav-item {
