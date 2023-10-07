@@ -179,7 +179,7 @@ function menushow() {
 
       containerr.innerHTML = `
 
-        <td><img style="max-width:60px" src="../img/miniatura.png"></td>
+        <td><img style="max-width:60px" src="img/miniatura.png"></td>
         <td><strong>Gelo 1KG</strong></td>
         <td>${valorAtual}</td>
         <td>R$${resultadogelo.toFixed(2)}</td>
