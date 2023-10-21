@@ -1,14 +1,3 @@
-function menushow() {
-    let menuMobile = document.querySelector(".mobile-menu");
-    if (menuMobile.classList.contains("open")) {
-      menuMobile.classList.remove("open");
-      document.querySelector(".icon").src = "img/menu-open.svg";
-    } else {
-      menuMobile.classList.add("open");
-      document.querySelector(".icon").src = "img/menu-closed.svg";
-    }
-  }
-
   var botaoAdicionar = document.getElementById("adicionarmais1");
   var botaoSubtrair = document.getElementById("adicionarmenos1");
   var botaoAdicionar2 = document.getElementById("adicionarmais2");
@@ -357,3 +346,4 @@ function menushow() {
       valor2.value = 0;
     }
   });
+  
