@@ -406,6 +406,7 @@ td {
 
 
  a{
+  font-family: 'Poppins', sans-serif;
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
@@ -427,7 +428,7 @@ td {
 @media screen and (max-width: 600px) {
   .banner-inicio{
     background-image: url(../img/banner-mobile.jpg);
-    background-position: left bottom;
+    background-position: right bottom;
   }
   .banner-inicio h1{
     font-size: 2.5rem;
