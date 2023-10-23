@@ -440,10 +440,16 @@ td {
 
 /* CONTEUDO ABAIXO DO BANNER */
 
+
+
+
+
+
+
 .primeiro-titulo {
   text-align: center;
   margin-top: 40px;
-  font-size: 26px;
+  font-size: 22px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   color: #039900;
@@ -467,15 +473,77 @@ td {
 
 
 
+.titulodoporque{
+  margin-top: 40px;
+  text-align: center;
+  background-color: #2D3192;
+  color: white;
+  font-size: 64px;
+  padding: 60px 20px 20px 40px;
+}
+
+
+
+
+.porqueprimeiro{
+  background-color: #2D3192;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+
+
+.porque-conteudo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+
+.porque-conteudo img{
+  width: 150px;
+}
+
+
+
+.descricao-conteudo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  padding: 0 40px;
+
+}
+
+
+
+
+.porque-conteudo h4{
+  padding-top: 14px;
+}
+.porque-conteudo p{
+  padding-top: 10px;
+  margin-bottom: 40px;
+  color: white;
+  text-align: center;
+}
 
 
 
 
 
+@media screen and (max-width: 800px) {
+  .porqueprimeiro{
+    grid-template-columns: 1fr 1fr;
+  }
 
 
-
-
+}
 
 
 
@@ -513,6 +581,19 @@ td {
     font-size: 18px;
 
     
+  }
+  .porqueprimeiro{
+    grid-template-columns: 1fr;
+  }
+
+
+  .titulodoporque{
+    margin-top: 40px;
+    text-align: center;
+    background-color: #2D3192;
+    padding: 40px 20px 20px 20px;
+    color: white;
+    font-size: 34px;
   }
 
 
