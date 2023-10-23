@@ -525,11 +525,15 @@ td {
 
 .porque-conteudo h4{
   padding-top: 14px;
+  font-size: 26px;
+  font-weight: bold;
 }
+
+
 .porque-conteudo p{
   padding-top: 10px;
   margin-bottom: 40px;
-  color: white;
+  color: rgb(224, 224, 224);
   text-align: center;
 }
 
@@ -595,6 +599,7 @@ td {
     color: white;
     font-size: 34px;
   }
+
 
 
 
