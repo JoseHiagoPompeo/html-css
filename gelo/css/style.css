@@ -482,7 +482,7 @@ td {
 
 @media screen and (max-width: 600px) {
   .banner-inicio{
-    background-image: url(../img/banner-mobile.jpg);
+    background-image: url(../img/banner-mobile.png);
     background-position: right bottom;
   }
   .banner-inicio h1{
@@ -500,7 +500,11 @@ td {
     margin: 60px 0px 0px 0px;
   }
 
+  .conteudo-imagens{
 
+    grid-template-columns: 1fr;
+
+  }
 
 
   .primeiro-titulo {
