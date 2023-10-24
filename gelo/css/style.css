@@ -52,7 +52,7 @@ body {
   text-decoration: none;
   color: #2c308f;
   font-size: 1.15rem;
-  font-weight: bold;
+  font-weight: 600;
 
 }
 .nav-link:hover{
@@ -379,14 +379,21 @@ td {
 
 
 .banner-inicio{
-  background-image: url(../img/banner.png);
+  background-image: url(../img/banner.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 85vh;
   padding: 0px 20px;
-
+  position: relative;
 
 }
+
+.mascote{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
 
 .banner-inicio h1{
   font-family: 'Poppins', sans-serif;
@@ -433,7 +440,7 @@ td {
 
 
 }
-.banner-inicio img{
+.cetabotao{
     width: 24px;
 }
 
@@ -781,9 +788,11 @@ td {
 
 @media screen and (max-width: 600px) {
   .banner-inicio{
-    background-image: url(../img/banner-mobile.png);
+    background-image: url(../img/banner-mobile.jpg);
     background-position: right bottom;
   }
+
+
   .banner-inicio h1{
     font-size: 2.5rem;
     padding-top: 20px;
