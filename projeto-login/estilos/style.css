@@ -1,0 +1,151 @@
+/*PALETA DE CORES
+verde: #49A09D
+lilás: #5F2C82
+
+*/
+
+/*TODAS AS DEMAIS MEDIAS*/
+
+/*RECOMENDAÇÃO W3C DO TYPCAL DEVIDE BREAKPOINTS
+PEQUENAS TELAS ATE 600PX
+CELULAR ATE 600PX ATE 768PX
+TABLE 768PX ATE 992PX
+DESKTOP 992PX ATE 1200 PX
+TV 1200+
+*/
+
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    
+}
+
+body, html {
+    background-color: #5F2C82;
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+section#login {
+    position: absolute;
+    top: 50%;
+    left: 50%;  
+    width: 250px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;/*tudo que estiver fora da borda vai ficar escondido ai volta o arredondado pq sem esse comando a imagem tapa*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, heigth 0.3s; /*animaçao de transiçao*/
+    transition-timing-function: ease;/*suavizar animaçao*/
+}
+
+section#login > div#imagem{
+    display: block;
+    background: url(../imagens/gold.jpg);
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+    
+}
+
+section#login > div#formulario {
+    display: block;
+    padding: 10px;
+    background-color: white;
+    height: 300px;
+
+}
+
+div#formulario >h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#formulario p{
+    font-size: 0.8em;
+}
+
+form > div.campo {
+    background-color: #5F2C82;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px 0px;
+    border: 2px solid #5F2C82;
+}
+
+div.campo > label {
+    display: none;
+}
+
+div.campo  span {
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo input{
+    background-color: #5dcfcb;
+    border: 0px;
+    font-size: 1em;
+    width: calc(100% - 44.36px);
+    height: 100%;
+    border-radius: 8px;
+    padding: 5px;
+    transform: translateY(-12px);
+}
+
+div.campo input:focus-within { /*fica branco quando estiver selecionado*/
+    background-color: white;
+}
+
+form > input[type=submit] {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: #49A09D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+form > input[type=submit]:hover {
+    background-color: #33706e;
+    cursor: pointer;
+}
+
+form > a.botao {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    padding-top: 5px;
+    margin-top: 5px;
+    height: 40px;
+    color: #173534;
+    background-color: white;
+    border: 1px solid #49A09D;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+form > a.botao:hover{
+    background-color: #5dcfcc;
+}
+
+form > a.botao > span {
+        font-size: 1em;
+}
