@@ -235,50 +235,74 @@ function clearCart(){
 
 const payBtn = document.querySelector(".btn-buy");
 const linkbase = "https://wa.me//5555991018742?text=";
-
-
 const total = document.querySelector('.total-price')
 
 
 
 
 payBtn.addEventListener("click", () => {
+
+
+
+  const resultado = total.innerText.replace(' ','')
+
   var cartItems = localStorage.getItem("cartItems");
   var texto = JSON.parse(cartItems);
-
-  if (texto.length > 1){
-
-
-  for (var i = 0; i < texto.length; i++) {    
-    var texto = JSON.parse(cartItems);
-   
-
-    var boasvindas = "PEDIDO:::TESTE"
-    var armazenatudo = []
-    armazenatudo.push("*",texto[i].quantity, texto[i].title, "VALOR: ", texto[i].price," ")
-    //window.location.href = linkbase + tituloproduto + quantidadeproduto + valorproduto
-
-    var armazena = armazenatudo.toString();
-
-    var concatena = armazena.concat(armazena)
- 
-  
-
+  if (texto.length <= 0) {
+    alert('erro')
+  } else if (texto.length == 1) {
     
-    var semespaco = concatena.replace(/[, ]/g, '%20');
+    var formatartitulo = texto[0].title.replace(/[, - ]/g, '%20');
+    var formatartitulofinal = formatartitulo.replace('-UNIDADE','')
+    var formatarpreco = texto[0].price.replace(" ","")
 
+    window.location.href =linkbase+">>>>>GOSTARIA%20DE%20FAZER%20UM%20PEDIDO<<<<<%0A"+texto[0].quantity+ "%20" + formatartitulofinal +"%20no%20valor%20de%20"+formatarpreco+"%0A...TOTAL:%20%20"+resultado
+
+
+  } else if (texto.length == 2){
+
+    var formatartitulo = texto[0].title.replace(/[, - ]/g, '%20');
+    var formatartitulofinal = formatartitulo.replace('-UNIDADE','')
+    var formatarpreco = texto[0].price.replace(" ","")
+    var formatartitulo2 = texto[1].title.replace(/[, - ]/g, '%20');
+    var formatartitulofinal2 = formatartitulo2.replace('-UNIDADE','')
+    var formatarpreco2 = texto[1].price.replace(" ","")
+
+    window.location.href =linkbase+">>>>>GOSTARIA%20DE%20FAZER%20UM%20PEDIDO<<<<<%0A"+texto[0].quantity+ "%20" + formatartitulofinal +"%20no%20valor%20de%20"+formatarpreco+"%0A........"+ texto[1].quantity+ "%20" + formatartitulofinal2+"%20no%20valor%20de%20"+formatarpreco2+"%20%0A...TOTAL:%20%20"+resultado
 
   }
 
-const resultado = total.innerText
 
 
 
- var finalformatado = ""
- finalformatado = linkbase + boasvindas + semespaco
-console.log(finalformatado)
- 
+
+
+
+  
 }
+
+//console.log(armazena)
+
+//  var finalformatado = ""
+//  finalformatado = linkbase + boasvindas + semespaco
+// console.log(finalformatado)
+ 
+// for (var i = 0; i < texto.length; i++) {    
+  //  armazenatudo.push(texto[0].quantity, texto[0].title, "VALOR: ", texto[0].price," ")
+//   console.log(texto[i].title);
+// var armazena = ""
+// armazena += texto[i].quantity + texto[i].title + 
+  //var boasvindas = "PEDIDO:::TESTE"
+ // var armazenatudo = []
+ // armazenatudo.push(texto[i].quantity, texto[i].title, "VALOR: ", texto[i].price," ")
+  //window.location.href = linkbase + tituloproduto + quantidadeproduto + valorproduto
+
+ // 
+
+
+ // var semespaco = concatena.replace(/[, ]/g, '%20');
+ 
+
 
 
   // setTimeout(function () {
@@ -290,4 +314,4 @@ console.log(finalformatado)
 
 
 
-});
+);
