@@ -80,9 +80,21 @@ function addCartClicked(event) {
   updatetotal();
   saveCartItems();
   updateCartIcon();
+
+
+
 }
 
 function addProductToCart(title, price, productImg) {
+
+  // FUNCAO PARA ADICIONAR EFEITO LEGAL QUANDO UM ITEM E COLOCADO NO CARRINHO
+  let aviso = document.querySelector('.aviso')
+  aviso.classList.add('ativaraviso')
+  setTimeout(() => {
+    aviso.classList.remove('ativaraviso')
+ },1000);
+
+
   var cartShopBox = document.createElement("div");
   cartShopBox.classList.add("cart-box");
   var cartItems = document.getElementsByClassName("cart-content")[0];
@@ -101,6 +113,10 @@ function addProductToCart(title, price, productImg) {
         <input type="number" name="" id="" value="1" class="cart-quantity">
     </div>
     <i class="bx bx-trash-alt cart-remove"></i>`;
+
+
+
+
 
   cartShopBox.innerHTML = cartBoxContent;
   cartItems.append(cartShopBox);
@@ -242,8 +258,6 @@ const total = document.querySelector('.total-price')
 
 payBtn.addEventListener("click", () => {
 
-
-
   const resultado = total.innerText.replace(' ','')
 
   var cartItems = localStorage.getItem("cartItems");
@@ -252,8 +266,8 @@ payBtn.addEventListener("click", () => {
     alert('erro')
   } else if (texto.length == 1) {
     
-    var formatartitulo = texto[0].title.replace(/[, - ]/g, '%20');
-    var formatartitulofinal = formatartitulo.replace('-UNIDADE','')
+    var formatartitulo = texto[0].title.replace(/[,-]/g, '%20');
+    var formatartitulofinal = formatartitulo.replace('UNIDADE','')
     var formatarpreco = texto[0].price.replace(" ","")
 
     window.location.href =linkbase+">>>>>GOSTARIA%20DE%20FAZER%20UM%20PEDIDO<<<<<%0A"+texto[0].quantity+ "%20" + formatartitulofinal +"%20no%20valor%20de%20"+formatarpreco+"%0A...TOTAL:%20%20"+resultado
@@ -261,57 +275,38 @@ payBtn.addEventListener("click", () => {
 
   } else if (texto.length == 2){
 
-    var formatartitulo = texto[0].title.replace(/[, - ]/g, '%20');
-    var formatartitulofinal = formatartitulo.replace('-UNIDADE','')
+    var formatartitulo = texto[0].title.replace(/[,-]/g, '%20');
+    var formatartitulofinal = formatartitulo.replace('UNIDADE','')
     var formatarpreco = texto[0].price.replace(" ","")
-    var formatartitulo2 = texto[1].title.replace(/[, - ]/g, '%20');
-    var formatartitulofinal2 = formatartitulo2.replace('-UNIDADE','')
+
+    var formatartitulo2 = texto[1].title.replace(/[,]/g, '%20');
+    var formatartitulofinal2 = formatartitulo2.replace('UNIDADE','')
     var formatarpreco2 = texto[1].price.replace(" ","")
 
     window.location.href =linkbase+">>>>>GOSTARIA%20DE%20FAZER%20UM%20PEDIDO<<<<<%0A"+texto[0].quantity+ "%20" + formatartitulofinal +"%20no%20valor%20de%20"+formatarpreco+"%0A........"+ texto[1].quantity+ "%20" + formatartitulofinal2+"%20no%20valor%20de%20"+formatarpreco2+"%20%0A...TOTAL:%20%20"+resultado
+  } else if (texto.length == 3) {
+
+    var formatartitulo = texto[0].title.replace(/[,-]/g, '%20');
+    var formatartitulofinal = formatartitulo.replace('UNIDADE','')
+    var formatarpreco = texto[0].price.replace(" ","")
+
+    var formatartitulo2 = texto[1].title.replace(/[,]/g, '%20');
+    var formatartitulofinal2 = formatartitulo2.replace('UNIDADE','')
+    var formatarpreco2 = texto[1].price.replace(" ","")
+
+    var formatartitulo3 = texto[2].title.replace(/[,]/g, '%20');
+    var formatartitulofinal3 = formatartitulo3.replace('UNIDADE','')
+    var formatarpreco3 = texto[2].price.replace(" ","")
+
+
+
+
+
+    window.location.href =linkbase+">>>>>GOSTARIA%20DE%20FAZER%20UM%20PEDIDO<<<<<%0A"+texto[0].quantity+ "%20" + formatartitulofinal +"%20no%20valor%20de%20"+formatarpreco+"%0A........"+ texto[1].quantity+ "%20" + formatartitulofinal2+"%20no%20valor%20de%20"+formatarpreco2+"%0A........"+ texto[2].quantity+ "%20" + formatartitulofinal3+"%20no%20valor%20de%20"+formatarpreco3+"%20%0A...TOTAL:%20%20"+resultado
 
   }
 
-
-
-
-
-
-
   
 }
-
-//console.log(armazena)
-
-//  var finalformatado = ""
-//  finalformatado = linkbase + boasvindas + semespaco
-// console.log(finalformatado)
- 
-// for (var i = 0; i < texto.length; i++) {    
-  //  armazenatudo.push(texto[0].quantity, texto[0].title, "VALOR: ", texto[0].price," ")
-//   console.log(texto[i].title);
-// var armazena = ""
-// armazena += texto[i].quantity + texto[i].title + 
-  //var boasvindas = "PEDIDO:::TESTE"
- // var armazenatudo = []
- // armazenatudo.push(texto[i].quantity, texto[i].title, "VALOR: ", texto[i].price," ")
-  //window.location.href = linkbase + tituloproduto + quantidadeproduto + valorproduto
-
- // 
-
-
- // var semespaco = concatena.replace(/[, ]/g, '%20');
- 
-
-
-
-  // setTimeout(function () {
- //window.location.href =
-    //    linkbase + 
-    //    "Olá%20eu%20gostaria%20de%20comprar%20" +
-    //    
-  // }, 3000); // 5000 milissegundos = 5 segundos
-
-
 
 );
