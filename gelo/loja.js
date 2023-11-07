@@ -270,7 +270,7 @@ payBtn.addEventListener("click", () => {
     var formatartitulofinal = formatartitulo.replace('UNIDADE','')
     var formatarpreco = texto[0].price.replace(" ","")
 
-    window.location.href =linkbase+">>>>>GOSTARIA%20DE%20FAZER%20UM%20PEDIDO<<<<<%0A"+texto[0].quantity+ "%20" + formatartitulofinal +"%20no%20valor%20de%20"+formatarpreco+"%0A...TOTAL:%20%20"+resultado
+    window.location.href =linkbase+"QUERO%20FAZER%20PEDIDO%0A*%20"+texto[0].quantity+ "%20" + formatartitulofinal +"%20NO%20VALOR%20DE%20"+formatarpreco+"%0ATOTAL:%20%20"+resultado
 
 
   } else if (texto.length == 2){
@@ -283,7 +283,7 @@ payBtn.addEventListener("click", () => {
     var formatartitulofinal2 = formatartitulo2.replace('UNIDADE','')
     var formatarpreco2 = texto[1].price.replace(" ","")
 
-    window.location.href =linkbase+">>>>>GOSTARIA%20DE%20FAZER%20UM%20PEDIDO<<<<<%0A"+texto[0].quantity+ "%20" + formatartitulofinal +"%20no%20valor%20de%20"+formatarpreco+"%0A........"+ texto[1].quantity+ "%20" + formatartitulofinal2+"%20no%20valor%20de%20"+formatarpreco2+"%20%0A...TOTAL:%20%20"+resultado
+    window.location.href =linkbase+"QUERO%20FAZER%20PEDIDO%0A*%20"+texto[0].quantity+ "%20" + formatartitulofinal +"%20NO%20VALOR%20DE%20"+formatarpreco+"%0A*%20"+ texto[1].quantity+ "%20" + formatartitulofinal2+"%20NO%20VALOR%20DE%20"+formatarpreco2+"%0ATOTAL:%20%20"+resultado
   } else if (texto.length == 3) {
 
     var formatartitulo = texto[0].title.replace(/[,-]/g, '%20');
@@ -302,7 +302,7 @@ payBtn.addEventListener("click", () => {
 
 
 
-    window.location.href =linkbase+">>>>>GOSTARIA%20DE%20FAZER%20UM%20PEDIDO<<<<<%0A"+texto[0].quantity+ "%20" + formatartitulofinal +"%20no%20valor%20de%20"+formatarpreco+"%0A........"+ texto[1].quantity+ "%20" + formatartitulofinal2+"%20no%20valor%20de%20"+formatarpreco2+"%0A........"+ texto[2].quantity+ "%20" + formatartitulofinal3+"%20no%20valor%20de%20"+formatarpreco3+"%20%0A...TOTAL:%20%20"+resultado
+    window.location.href =linkbase+"QUERO%20FAZER%20PEDIDO%0A*%20"+texto[0].quantity+ "%20" + formatartitulofinal +"%20NO%20VALOR%20DE%20"+formatarpreco+"%0A*%20"+ texto[1].quantity+ "%0A*%20" + formatartitulofinal2+"%20NO%20VALOR%20DE%20"+formatarpreco2+"%0A*%20"+ texto[2].quantity+ "%0A*%20" + formatartitulofinal3+"%20NO%20VALOR%20DE%20"+formatarpreco3+"%0ATOTAL:%20%20"+resultado
 
   }
 
