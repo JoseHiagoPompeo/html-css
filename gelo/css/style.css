@@ -623,9 +623,7 @@ a {
 .config-whats img {
   display: block;
 }
-.config-link {
-  display: none;
-}
+
 
 .links-internos {
   display: flex;
@@ -644,13 +642,13 @@ a {
 
 .direitos {
   border-top: 1px solid #171b6d;
-  background-color: #05074d;
+  background-color: #03053d;
 }
 .direitos p {
+  padding: 4px;
   color: white;
   text-align: center;
-  border-top: 1px solid #171b6d;
-  background-color: #05074d;
+
 }
 
 .aviso {
@@ -888,11 +886,11 @@ a {
     position: absolute;
     bottom: -10px;
     left: 50%;
-    width: 300px;
+    width: 200px;
 
     transform: translate(-50%, -50%);
     height: 1px;
-    background-color: rgba(255, 255, 255, 0.384);
+    background-color: rgba(255, 255, 255, 0.247);
   }
 
 
@@ -910,4 +908,12 @@ a {
   .config-whats {
     justify-content: center;
   }
+  .config-link {
+    display: none;
+  }
+
+
+
+
+
 }

@@ -279,7 +279,7 @@ payBtn.addEventListener("click", () => {
     var formatartitulofinal = formatartitulo.replace('UNIDADE','')
     var formatarpreco = texto[0].price.replace(" ","")
 
-    var formatartitulo2 = texto[1].title.replace(/[,]/g, '%20');
+    var formatartitulo2 = texto[1].title.replace(/[,-]/g, '%20');
     var formatartitulofinal2 = formatartitulo2.replace('UNIDADE','')
     var formatarpreco2 = texto[1].price.replace(" ","")
 
@@ -290,11 +290,11 @@ payBtn.addEventListener("click", () => {
     var formatartitulofinal = formatartitulo.replace('UNIDADE','')
     var formatarpreco = texto[0].price.replace(" ","")
 
-    var formatartitulo2 = texto[1].title.replace(/[,]/g, '%20');
+    var formatartitulo2 = texto[1].title.replace(/[,-]/g, '%20');
     var formatartitulofinal2 = formatartitulo2.replace('UNIDADE','')
     var formatarpreco2 = texto[1].price.replace(" ","")
 
-    var formatartitulo3 = texto[2].title.replace(/[,]/g, '%20');
+    var formatartitulo3 = texto[2].title.replace(/[,-]/g, '%20');
     var formatartitulofinal3 = formatartitulo3.replace('UNIDADE','')
     var formatarpreco3 = texto[2].price.replace(" ","")
 
